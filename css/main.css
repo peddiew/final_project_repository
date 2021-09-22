@@ -1,49 +1,37 @@
 body {
-  font-family: 'Nunito', Arial, sans-serif;
-  font-size: 12px;
+  font-family: 'Grechen Fuemen', Roboto, sans-serif;
+  font-size: 18px;
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-/* REUSABLE STYLES */
 .willpeddie-container {
   padding: 50px 5px;
 }
 
-/*
- * Check out how the transition property and the :hover pseudo class work together
- * You get a nice smooth fade-in color switch when hovering over the element
- */
 .willpeddie-button {
-  background-color: #ff5358;
-  border-bottom: 2px solid #e00007;
+  background-color: #EC6408;
+  border-bottom: 1px solid #963D00;
   border-radius: 3px;
   color: white;
   cursor: pointer;
-  font-size: 14px;
-  margin: 15px auto;
+  font-size: 18px;
+  margin: 30px auto;
   text-align: center;
-  transition: 0.4s ease-in-out;
-  width: 250px;
+  transition: .5s ease-in-out;
+  width: 200px;
 }
 
 .willpeddie-button:hover {
-  background-color: #e00007;
+  background-color: #963D00;
 }
 
 .willpeddie-button-text {
-  padding: 10px;
+  padding: 8px;
 }
 
-/*
- * To make the image darker, we have to think about the page in three dimensions
- * We haven't talked about this yet but the position property is very powerful
- * The idea is that we are going to position a dark mask above our image
- * We position this pseudo class before the image so that it sits on top
- * It's given a slightly transparent background using rgba colors
- */
 
 .image-mask-darken {
   position: relative;
@@ -59,11 +47,13 @@ h1, h2, h3, h4, h5, h6 {
   content: "";
 }
 
-/* HEADER */
+
+
+
 .willpeddie-header {
   align-items: center;
   display: flex;
-  height: 60px;
+  height: 80px;
   justify-content: space-between;
 }
 
@@ -76,67 +66,53 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  font-size: 10px;
+  font-size: 14px;
 }
 
 .willpeddie-logo {
-  padding: 100px 30px;
-  width: 100px;
+  padding: 100px 50px;
+  width: 275px;
 }
 
 .willpeddie-nav-element {
   cursor: pointer;
-  padding: 10px 30px;
+  padding: 10px 50px;
 }
 
-/*
- * Check out the use of this pseudo class to get my spacing just right
- * This works because in my HTML, there are two .willpeddie-nav-element divs right next to each other
- */
+
 .willpeddie-nav-element:last-child {
   padding-left: 0;
 }
 
-/* HERO */
+
+
 .willpeddie-main-photo {
   align-items: center;
-  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/melbourne.jpg');
+  background-image: url('https://willpeddie.com/wp-content/uploads/2021/09/peddie.body_.blue_.jpg');
   background-position: center center;
   background-size: cover;
   display: flex;
   justify-content: center;
-  height: 550px;
+  height: 800px;
 }
 
-/*
- * To get the text to appear above the faded background, we need to position it absolutely
- * This pops it out above the background
- */
+
 .willpeddie-intro-content {
   color: white;
   position: absolute;
   text-align: center;
-  width: 400px;
+  width: 700px;
 }
 
 .willpeddie-intro-title {
-  font-size: 64px;
+  font-size: 80px;
 }
 
 .willpeddie-intro-subtitle {
-  font-size: 16px;
+  font-size: 32px;
 }
 
-/* Middle part of page */
 
-/**
- * Notice I'm listing the flex-direction: column; BEFORE the media query
- * This is a mobile-first responsive style
- * You declare as many of the property:value pairs as you need
- * Then you reset the ones you need to modify per screen
- * In our case we want to flip between a single column on mobile, row of items on desktop
- * This is a super familiar pattern in CSS, very common and easy with flexbox
- */
 .willpeddie-middle {
   align-items: center;
   background-color: #efefef;
@@ -153,12 +129,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .willpeddie-middle-box {
   border: 1px solid #dbdbdb;
-  width: 96%;
+  width: 94%;
 }
 
 @media (min-width: 550px) {
   .willpeddie-middle-box {
-    width: 48%;
+    width: 46%;
   }
 }
 
@@ -173,11 +149,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .willpeddie-middle-icon {
   padding-right: 12px;
+  width: 50px;
 }
 
 .willpeddie-middle-titles {
   background-color: #edefed;
-  font-size: 14px;
+  font-size: 20px;
   padding: 12px 18px;
 }
 
@@ -186,18 +163,21 @@ h1, h2, h3, h4, h5, h6 {
   padding-right: 12px;
 }
 
-/* DJ */
+
+
+
+
 .willpeddie-dj-container {
   padding: 50px 5px;
 }
 
 .willpeddie-dj-title {
-  font-size: 32px;
+  font-size: 46px;
   text-align: center;
 }
 
 .willpeddie-dj-subtitle {
-  font-size: 14px;
+  font-size: 18px;
   padding: 10px 0;
   text-align: center;
 }
@@ -212,7 +192,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 30%;
 }
 
-/* Note that here we are doing nested flex boxes */
 .willpeddie-indiv-dj-header {
   align-items: center;
   background-position: center center;
@@ -220,23 +199,21 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
   display: flex;
   flex-direction: column;
-  height: 300px; /* approximate estimate */
+  height: 200px; 
   justify-content: space-around;
   text-align: center;
 }
 
-/* I added specific classes for the custom background images for each section */
-.fitzroy  { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/fitzroy.jpg'); }
-.st-kilda { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/st-kilda.jpg'); }
-.cbd      { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/central-business-district.jpg');}
+.pioneer  { background-image: url('https://willpeddie.com/wp-content/uploads/2021/09/peddie.body_.blue_.jpg'); }
+.marketing { background-image: url('https://willpeddie.com/wp-content/uploads/2021/09/peddie.face_.bw_.jpg'); }
+.services      { background-image: url('https://willpeddie.com/wp-content/uploads/2021/09/peddie.body_.blue_.jpg');}
 
-/* Again, to achieve darkened image effect, we need to move interior content above the background image */
 .willpeddie-indiv-dj-header-content {
   position: absolute;
 }
 
 .willpeddie-indiv-dj-title {
-  font-size: 24px;
+  font-size: 46px;
 }
 
 .willpeddie-indiv-dj-details {
@@ -244,7 +221,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid #dbdbdb;
   line-height: 1.4;
   margin: 0;
-  min-height: 50px; /* makes the detail boxes look uniform */
+  min-height: 50px;
   padding: 20px;
 }
 
@@ -254,13 +231,12 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
   display: flex;
   flex-direction: column;
-  height: 150px;
+  height: 100px;
   justify-content: center;
 }
 
-/* Styling horizontal rules requires you give it some height */
 hr {
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 2px solid rgba(255,255,255,0.2);
   margin-bottom: 40px;
-  width: 95%;
+  width: 92%;
 }
