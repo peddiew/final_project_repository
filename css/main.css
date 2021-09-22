@@ -1,5 +1,5 @@
 body {
-  font-family: 'Grechen Fuemen', Roboto, sans-serif;
+  font-family: 'Orbitron', Roboto, sans-serif;
   font-size: 18px;
 }
 
@@ -66,8 +66,56 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  font-size: 14px;
+  font-size: 20px;
 }
+
+.menu-control {
+  fill: #fff;
+  margin: 30px;
+  width: 50px;
+}
+
+.menu-control:hover {
+  cursor: pointer;
+}
+
+
+.menu {
+  background-color: rgba(7,34,53,1);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  overflow-y: scroll;
+  padding: 80px 40px;
+  position: fixed;
+  transition: all 1.2s ease-in-out;
+  transform: translateX(100%);
+  z-index: 10;
+}
+
+
+.menu-open {
+ transform: translateX(70%);
+  opacity: .85;
+ 
+  
+}
+.menu a, .menu a:focus, .menu a:visited {
+  color: white;
+  display: block;
+  font-size: 30px;
+  margin: 28px auto;
+  text-align: left;
+  text-decoration: none;
+}
+.menu-close {
+  background-color: white;
+  color: darkred;
+}
+
+
 
 .willpeddie-logo {
   padding: 100px 50px;
@@ -76,12 +124,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .willpeddie-nav-element {
   cursor: pointer;
-  padding: 10px 50px;
+  padding: 10px 20px;
 }
 
 
 .willpeddie-nav-element:last-child {
-  padding-left: 0;
+  padding-left: 10px;
+  padding-right: 60px;
 }
 
 
@@ -101,11 +150,11 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
   position: absolute;
   text-align: center;
-  width: 700px;
+  width: 80%;
 }
 
 .willpeddie-intro-title {
-  font-size: 80px;
+  font-size: 40px;
 }
 
 .willpeddie-intro-subtitle {
@@ -121,7 +170,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
 }
 
-@media (min-width: 550px) {
+@media (min-width: 800px) {
   .willpeddie-middle {
     flex-direction: row;
   }
@@ -132,11 +181,26 @@ h1, h2, h3, h4, h5, h6 {
   width: 94%;
 }
 
-@media (min-width: 550px) {
+@media (min-width: 800px) {
   .willpeddie-middle-box {
     width: 46%;
   }
 }
+
+@media (max-width: 799px) {
+  .willpeddie-nav {
+    display: none;
+  }
+}
+
+
+@media (min-width: 800px) {
+  .menu-control {
+    display: none;
+  }
+}
+
+
 
 .willpeddie-middle-content-container {
   align-items: center;
@@ -177,7 +241,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .willpeddie-dj-subtitle {
-  font-size: 18px;
+  font-size: 14px;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.willpeddie-indiv-dj-subtitle {
+  font-size: 16px;
   padding: 10px 0;
   text-align: center;
 }
@@ -204,16 +274,16 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
-.pioneer  { background-image: url('https://willpeddie.com/wp-content/uploads/2021/09/peddie.body_.blue_.jpg'); }
+.music  { background-image: url('https://willpeddie.com/wp-content/uploads/2021/09/peddie.body_.blue_.jpg'); }
 .marketing { background-image: url('https://willpeddie.com/wp-content/uploads/2021/09/peddie.face_.bw_.jpg'); }
-.services      { background-image: url('https://willpeddie.com/wp-content/uploads/2021/09/peddie.body_.blue_.jpg');}
+.events      { background-image: url('https://willpeddie.com/wp-content/uploads/2021/09/peddie.body_.blue_.jpg');}
 
 .willpeddie-indiv-dj-header-content {
   position: absolute;
 }
 
 .willpeddie-indiv-dj-title {
-  font-size: 46px;
+  font-size: 24px;
 }
 
 .willpeddie-indiv-dj-details {
@@ -224,6 +294,13 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 50px;
   padding: 20px;
 }
+
+
+.willpeddie-indiv-dj-details {
+  font-size: 12px;
+}
+
+
 
 .willpeddie-footer {
   align-items: center;
@@ -236,7 +313,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 hr {
-  border: 2px solid rgba(255,255,255,0.2);
+  border: 1.5px solid rgba(255,255,255,0.2);
   margin-bottom: 40px;
-  width: 92%;
+  width: 96%;
 }
