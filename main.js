@@ -20,6 +20,6 @@ function closeMenu() {
 const button = document.querySelector("#click-to-start");
 
 button.onclick = function() {
-let DJ Moniker = prompt("What's your DJ Moniker?");
-alert(`Hello, ${DJ Moniker}!`);
+let name = prompt("What's your name?");
+alert(`Hello, ${name}!`);
 }
