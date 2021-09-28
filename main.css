@@ -340,6 +340,21 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
+.soundcloud-iframe {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.spotify-iframe {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
 .willpeddie-footer {
   align-items: center;
   background-color: #2B2D2E;
